@@ -12,9 +12,11 @@ Time-course deep learning (TDL) model architecture. To infer gene interactions (
 
 >>## Users need to install python and ‘Keras’ and ‘theano’ modules, and  all ohther modules required by the code. We  recommend Anaconda to do this.
 Author's environment is python 3.6.3 in a Linux server which is now running Centos 6.5 as the underlying OS and Rocks 6.1.1 as the cluster management revision. 
-##    ############################## still working on the following ...
-># 3, Example for running in interaction task for 
-Users should first figure out the right paths for all the scripts and datasets.
+
+># 3, demo for running in interaction task  
+
+## Users should first figure out the right paths for all the scripts and datasets.
+
 >>## 3.1 Training and test data generation 
 >>>### Usage: 
 
@@ -61,7 +63,7 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
      
    `conv_lstm_deep.py` uses `3D NEPDF` and `ground truth list` to train and test `deep conv lstm` models in three fold cross validation. Please change 'data_path' accordingly.
    
- >>## 3.4 get performance of optimal model for ten fold cross validation
+ >>## 3.4 get performance of optimal model for three fold cross validation
   
      python predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py
      
