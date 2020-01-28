@@ -22,7 +22,7 @@ Users should first set the path as the downloaded folder.
     
 >>>### command line in author's linux machine :
 
-    python get_xy_label_data_cnnc_combine_from_database_3d8X8.py None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/gene_list_ref.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400_num.txt None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM 6 1 GTRD_NT_8X8_6 
+    python get_xy_label_data_cnnc_combine_from_database_3d8X8.py None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/hesc2_gene_list_ref.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400_num.txt None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM 6 1 GTRD_NT_8X8_6 
  
 
 `get_xy_label_data_cnnc_combine_from_database_3d8X8.py` uses the normalized scRNA-seq expresson data  to generate time-course normalized emperical PDF for each TF-candidate gene pair, and save it in `<data generation folder name>` folder.
@@ -50,15 +50,15 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
 
 >>## 3.2 Training and test model
 
-    python gcn_LR2_LR_as_nega_big.py
+    python 3D_CNN.py
     
-  `gcn_LR2_LR_as_nega_big.py` uses normalized adjacent matrix to generate normalized laplacian matrix, and then uses laplacian matrix to train and test GCNG models in ten fold cross validation. 
+  `3D_CNN.py` uses 3D NEPDF and ground truth list to train and test 3D CNN model in three fold cross validation. 
   
  >>## 3.3 get optimal model
  
-     python gcn_LR2_LR_as_nega_big_layer_predict_min.py
+     python conv_lstm_deep.py
      
-   `gcn_LR2_LR_as_nega_big_layer_predict_min.py` tries to find the optimal model during the trainning, by monitoring the validation dataset's accuracy.
+   `conv_lstm_deep.py` uses 3D NEPDF and ground truth list to train and test deep conv lstm models in three fold cross validation. 
    
  >>## 3.4 get performance of optimal model for ten fold cross validation
   
