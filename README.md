@@ -25,7 +25,9 @@ Author's environment is python 3.6.3 in a Linux server which is now running Cent
 >>>### command line in author's linux machine :
 
     python get_xy_label_data_cnnc_combine_from_database_3d8X8.py None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/hesc2_gene_list_ref.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400_num.txt None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM 6 1 GTRD_NT_8X8_6 
- (where the path for the expession data is '/home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM_1.h5','/home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM_2.h5'......)
+ (where the path for the expession data is 
+ '/home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM_1.h5',
+ '/home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM_2.h5'......)
 
 `get_xy_label_data_cnnc_combine_from_database_3d8X8.py` uses the normalized scRNA-seq expresson data  to generate time-course normalized emperical PDF for each TF-candidate gene pair, and save it in `<data generation folder name>` folder.
 
