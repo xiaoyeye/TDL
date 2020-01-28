@@ -24,6 +24,7 @@ Users should first set the path as the downloaded folder.
 `get_xy_label_data_cnnc_combine_from_database_3d8X8.py` uses the normalized scRNA-seq expresson data  to generate time-course normalized emperical PDF for each TF-candidate gene pair, and save it in `<data generation folder name>` folder.
 
 >>>#2, `gene name list` is the list that converts sc expression data gene set into gene symbol IDs. Format: `'gene symbol IDs\t sc gene ID'`.
+
 >>>#3, `TF-target pair list` is the list that contains gene pairs and their labels. format : `'GeneA    GeneB    label'`.
 
 >>>#4, `TF-target pair count list` is a number list that divides gene_pair_list into small parts, where each part corresponds to one TF.
