@@ -71,5 +71,5 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
   
      python predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py
      
-   `predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py` collects and summrzies results of the model in each fold to present the final results. Please change 'data_path', 'save_dir', 'the path of trained model'accordingly.
+   `predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py` collects and summrzies results of the model in each fold to present the final results. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
  
