@@ -14,7 +14,7 @@ Time-course deep learning (TDL) model architecture. To infer gene interactions (
 Author's environment is python 3.6.3 in a Linux server which is now running Centos 6.5 as the underlying OS and Rocks 6.1.1 as the cluster management revision. 
 ##    ############################## still working on the following ...
 ># 3, Example for running in interaction task for 
-Users should first figure out the right path for all the scripts and datasets.
+Users should first figure out the right paths for all the scripts and datasets.
 >>## 3.1 Training and test data generation 
 >>>### Usage: 
 
@@ -48,7 +48,7 @@ It generates a 3D NEPDF_data folder, and a series of data files containing `Nxda
 
 Here we use gene symbol information to align scRNA-seq and gene pair's gene sets. The scRNA-seq may use entrez ID or ensembl ID, or other IDs, gene pair list for GTRD used gene symbol ID, thus we generated `gene name list` to convert all the IDs to gene symbols. Please also do IDs convertion if users want to use their own expression data.
 
-## the file path in the following code is used in the author's own machine, so please change it to the approprite according to user's own environment.
+## the file path of 'data_path'in the following code is used in the author's own machine, so please change it to the approprite path according to user's own environment.
 >>## 3.2 Training and test 3D CNN model 
 
     python 3D_CNN.py
