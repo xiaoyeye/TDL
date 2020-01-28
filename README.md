@@ -14,7 +14,7 @@ Time-course deep learning (TDL) model architecture. To infer gene interactions (
 Author's environment is python 3.6.3 in a Linux server which is now running Centos 6.5 as the underlying OS and Rocks 6.1.1 as the cluster management revision. 
 ##    ############################## still working on the following ...
 ># 3, Example for running in interaction task for 
-Users should first set the path as the downloaded folder. 
+Users should first figure out the right path for all the scripts and datasets.
 >>## 3.1 Training and test data generation 
 >>>### Usage: 
 
