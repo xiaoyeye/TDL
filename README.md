@@ -53,17 +53,17 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
 
     python 3D_CNN.py
     
-  `3D_CNN.py` uses `3D NEPDF` and `ground truth` list to train and test `3D CNN` model in three fold cross validation. 
+  `3D_CNN.py` uses `3D NEPDF` and `ground truth` list to train and test `3D CNN` model in three fold cross validation. Please change 'data_path' accordingly.
   
  >>## 3.3 Training and test LSTM model
  
      python conv_lstm_deep.py
      
-   `conv_lstm_deep.py` uses `3D NEPDF` and `ground truth list` to train and test `deep conv lstm` models in three fold cross validation. 
+   `conv_lstm_deep.py` uses `3D NEPDF` and `ground truth list` to train and test `deep conv lstm` models in three fold cross validation. Please change 'data_path' accordingly.
    
  >>## 3.4 get performance of optimal model for ten fold cross validation
   
      python predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py
      
-   `predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py` collects and summrzies results of the model in each fold to present the final results.
+   `predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py` collects and summrzies results of the model in each fold to present the final results. Please change 'data_path', 'save_dir', 'the path of trained model'accordingly.
  
