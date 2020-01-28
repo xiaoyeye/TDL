@@ -19,7 +19,11 @@ Users should first set the path as the downloaded folder.
 >>>### Usage: 
 
     python get_xy_label_data_cnnc_combine_from_database_3d8X8.py <None> <gene name list> <TF-target pair list> <TF-target pair count list> <None> <time-course scRNA-seq path+file prefix> <time point number> <flag if pair list has ground truth> <data generation folder name> 
+    
+>>>### command line in author's linux machine :
 
+    python get_xy_label_data_cnnc_combine_from_database_3d8X8.py None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/gene_list_ref.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400_num.txt None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM 6 1 GTRD_NT_8X8_6 
+ 
 
 `get_xy_label_data_cnnc_combine_from_database_3d8X8.py` uses the normalized scRNA-seq expresson data  to generate time-course normalized emperical PDF for each TF-candidate gene pair, and save it in `<data generation folder name>` folder.
 
