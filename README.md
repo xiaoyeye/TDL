@@ -40,7 +40,7 @@ Users should first set the path as the downloaded folder.
 
 #################OUTPUT
 
-It generates a 3D NEPDF_data folder, and a series of data files containing `Nxdata_tf` (3D NEPDF file)  and `zdata_tf` (gene symbol pair file) for each data part divided.
+It generates a 3D NEPDF_data folder, and a series of data files containing `Nxdata_tf` (3D NEPDF file) ,`ydata_TF`(label file) and `zdata_tf` (gene symbol pair file) for each data part divided.
 
 Here we use gene symbol information to align scRNA-seq and gene pair's gene sets. The scRNA-seq may use entrez ID or ensembl ID, or other IDs, gene pair list for GTRD used gene symbol ID, thus we generated `gene name list` to convert all the IDs to gene symbols. Please also do IDs convertion if users want to use their own expression data.
 
