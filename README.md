@@ -13,12 +13,13 @@ Time-course deep learning (TDL) model architecture. To infer gene interactions (
 >>## Users need to install python and ‘Keras’ and ‘theano’ modules, and  all ohther modules required by the code. We  recommend Anaconda to do this.
 Author's environment is python 3.6.3 in a Linux server which is now running Centos 6.5 as the underlying OS and Rocks 6.1.1 as the cluster management revision. 
 ##    ############################## still working on the following ...
-># 3, Example for running
+># 3, Example for running in interaction task for 
 Users should first set the path as the downloaded folder. 
->>## 3.1 Training and test data generation  for ligand-receptor prediction
+>>## 3.1 Training and test data generation 
 >>>### Usage: 
 
-    python data_generation_interaction_ten_fold.py
+    python get_xy_label_data_cnnc_combine_from_database_3d8X8.py <None> <gene name list> <TF-target pair list> <TF-target pair count list> <None> <time-course scRNA-seq path+file prefix> <time point number> <flag if have ground truth in pair list> <data generation folder name> 
+
 
 `data_generation_interaction_ten_fold.py` uses the spatial location data to generate normalized adjacent matrix of cells, and save it in `seqfish_plus` folder; also uses the expression data to generate expression matrix for ten fold cross validation, and save it in `rand_1_10fold` folder.
 
