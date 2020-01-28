@@ -21,7 +21,27 @@ Users should first set the path as the downloaded folder.
     python get_xy_label_data_cnnc_combine_from_database_3d8X8.py <None> <gene name list> <TF-target pair list> <TF-target pair count list> <None> <time-course scRNA-seq path+file prefix> <time point number> <flag if pair list has ground truth> <data generation folder name> 
 
 
-`data_generation_interaction_ten_fold.py` uses the spatial location data to generate normalized adjacent matrix of cells, and save it in `seqfish_plus` folder; also uses the expression data to generate expression matrix for ten fold cross validation, and save it in `rand_1_10fold` folder.
+`get_xy_label_data_cnnc_combine_from_database_3d8X8.py` uses the normalized scRNA-seq expresson data  to generate time-course normalized emperical PDF for each TF-candidate gene pair, and save it in `<data generation folder name>` folder.
+
+>>>#2, `gene name list` is the list that converts sc expression data gene set into gene symbol IDs. Format: `'gene symbol IDs\t sc gene ID'`.
+>>>#3, `TF-target pair list` is the list that contains gene pairs and their labels. format : `'GeneA    GeneB    label'`.
+
+>>>#4, `TF-target pair count list` is a number list that divides gene_pair_list into small parts, where each part corresponds to one TF.
+
+#By file4, we are able to evaluate TDL's performance on only one TF.
+
+>>>#6, `time-course scRNA-seq path+file prefix`  it should be a list of h5 format files, with name of 'prefix0.h5','prefix1.h5'.......
+
+>>>#7， `flag`, 0 means do not generate label list; 1 means to generate label list.
+
+>>#8, `data generation folder name` is a new folder will be created to save generated train and test data.
+
+
+#################OUTPUT
+
+It generates a 3D NEPDF_data folder, and a series of data files containing `Nxdata_tf` (3D NEPDF file)  and `zdata_tf` (gene symbol pair file) for each data part divided.
+
+Here we use gene symbol information to align scRNA-seq and gene pair's gene sets. The scRNA-seq may use entrez ID or ensembl ID, or other IDs, gene pair list for GTRD used gene symbol ID, thus we generated `gene name list` to convert all the IDs to gene symbols. Please also do IDs convertion if users want to use their own expression data.
 
 >>## 3.2 Training and test model
 
