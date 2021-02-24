@@ -52,7 +52,7 @@ def load_data(indel_list,data_path): # cell type specific  ## random samples for
 
 
 
-save_dir = os.path.join(os.getcwd(),'new_Xlr00005_KEGG_3d_conv_ddeeper_NT_p600_e100_threesets_acc') ### the final performance folder
+save_dir = os.path.join(os.getcwd(),'new_Xlr00001_KEGG_3d_conv_ddeeper_NT_p600_e100_threesets_acc') ### the final performance folder
 length_TF = 36
 model_name = 'keras_cnn_trained_model_shallow.h5'
 whole_data_TF = [i for i in range(length_TF)]
