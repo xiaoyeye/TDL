@@ -59,7 +59,7 @@ for test_indel in [1]: ##################
     print(x_test.shape, 'x_test samples')
     print(y_test.shape, 'y_test samples')
 ############################### model
-    save_dir = os.path.join(os.getcwd(),str(test_indel) + 'new_Xlr00005_KEGG_3d_conv_ddeeper_NT_p600_e' + str(epochs)) ##### The path of model used here
+    save_dir = os.path.join(os.getcwd(),str(test_indel) + 'new_Xlr0001_KEGG_3d_conv_ddeeper_NT_p600_e' + str(epochs)) ##### The path of model used here
     if not os.path.isdir(save_dir):
         os.makedirs(save_dir)
     seq = Sequential()
@@ -76,7 +76,7 @@ for test_indel in [1]: ##################
     seq.add(Activation('relu'))
     seq.add(Dropout(0.5))
     seq.add(Dense(1, activation='sigmoid'))
-    sgd = SGD(lr=0.002, decay=1e-6, momentum=0.9, nesterov=True)
+    sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
     seq.compile(optimizer=sgd,loss='binary_crossentropy',metrics=['accuracy'])
     plot_model(seq, to_file='conv_lstm.png',show_shapes=True)
     model_path = os.path.join(save_dir, model_name)
