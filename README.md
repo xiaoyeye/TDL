@@ -53,7 +53,7 @@ It generates a 3D NEPDF_data folder, and a series of data files containing `Nxda
 
 Here we use gene symbol information to align scRNA-seq and gene pair's gene sets. The scRNA-seq may use entrez ID or ensembl ID, or other IDs, gene pair list for GTRD used gene symbol ID, thus we generated `gene name list` to convert all the IDs to gene symbols. Please also do IDs convertion if users want to use their own expression data.
 
-## the file path of 'data_path'in the following code is used in the author's own machine, so please change it to the approprite path according to user's own environment.
+## The file path of 'data_path'in the following code is used in the author's own machine, so please change it to the approprite path according to user's own environment.
 >>## 3.2 Training and test 3D CNN model 
 
     python 3D_CNN.py
@@ -66,13 +66,13 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
      
    `conv_lstm_deep.py` uses `3D NEPDF` and `ground truth list` to train and test `deep conv lstm` models in three fold cross validation. Please change 'data_path' accordingly.
    
- >>## 3.4 get performance of optimal model for three fold cross validation
+ >>## 3.4 Get performance of optimal model for three fold cross validation
   
      python predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py
      
    `predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py` collects and summrzies results of the model in each fold to present the final results. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
  
- >>## 3.5 get prediction using the trained model.
+ >>## 3.5 Get prediction using the trained model.
   
      python conv_lstm_deep_prediction.py
      
