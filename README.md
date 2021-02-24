@@ -13,6 +13,9 @@ Time-course deep learning (TDL) model architecture. To infer gene interactions (
 Author's environment is python 3.6.3 in a Linux server which is now running Centos 6.5 as the underlying OS and Rocks 6.1.1 as the cluster management revision. 
 
 ># 3, Demo for running in interaction task  
+![](https://github.com/xiaoyeye/TDL/blob/master/pipeline for TDL.jpg)
+
+Firstly, gene pair plus label list and normalized time-course single cell gene expression data are provided by users to generated 3D NEDPF for each (gene pair, label). Secondly, a cross validation strategy is used to train and test our TDL models. Finally the model can predict new gene pair’s label.
 
 ## Users should first figure out the right paths for all the scripts and datasets.
 
