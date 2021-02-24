@@ -3,7 +3,7 @@
 ##
 
 ># 1, TDL overview
-![](https://github.com/xiaoyeye/TDL/blob/master/TDL_overview.bmp)
+![](https://github.com/xiaoyeye/TDL/blob/master/TDL_overview.png)
 
 Time-course deep learning (TDL) model architecture. To infer gene interactions (top left) we first convert time-course single cell expression data to a 3D tensor, which we term normalized empirical probability distribution function (NEPDF). Each 2D slice of the NEPDF captures the co-expression of a pair of genes at one of the time points profiled and the 3D NEPDF represents their co-expression over time. 3D NEPDF is then used as input to atime-course deep learning (TDL) model. The model is trained using labeled positive and negative pairs. The figure shows the convolutional Long short-term memory (LSTM) architecture which is one of the two TDL model we tested. This mode consists of two stacked LSTM layers, followed by a dense layer which concatenates all convolutional hidden state from LSTM layer and then a final output (classifica-tion) layer. See Supporting Figure S1 for the other TDL architecture we tested, 3D CNN.
 
