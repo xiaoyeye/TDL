@@ -72,3 +72,8 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
      
    `predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py` collects and summrzies results of the model in each fold to present the final results. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
  
+ >>## 3.5 get prediction using the trained model.
+  
+     python conv_lstm_deep_prediction.py
+     
+   `conv_lstm_deep_prediction.py` uses the trained model to give prediction for new gene pair list. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
