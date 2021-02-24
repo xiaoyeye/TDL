@@ -61,7 +61,7 @@ for test_indel in range(1,4): ################## three fold cross validation
     print(y_train.shape, 'y_train samples')
     print(y_test.shape, 'y_test samples')
 ############################### model
-    save_dir = os.path.join(os.getcwd(),str(test_indel) + 'Xlr0001_KEGG_3d_conv_dep_NT_p600_e' + str(epochs))
+    save_dir = os.path.join(os.getcwd(),str(test_indel) + 'Xlr00001_KEGG_3d_conv_dep_NT_p600_e' + str(epochs))
     if not os.path.isdir(save_dir):
         os.makedirs(save_dir)
     seq = Sequential()
@@ -86,12 +86,12 @@ for test_indel in range(1,4): ################## three fold cross validation
         sys.exit()
     elif num_classes ==2:
         seq.add(Dense(1, activation='sigmoid'))
-        sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
+        sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
         seq.compile(optimizer=sgd,loss='binary_crossentropy',metrics=['accuracy'])
     else:
         seq.add(Dense(num_classes))
         seq.add(Activation('softmax'))
-        sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
+        sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
         seq.compile(optimizer=sgd,loss='categorical_crossentropy',metrics=['accuracy'])	
     plot_model(seq, to_file='conv3d_sy_NT8X8_KEGG.png',show_shapes=True)
 
