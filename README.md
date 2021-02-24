@@ -22,18 +22,18 @@ Firstly, gene pair plus label list and normalized time-course single cell gene e
 >>## 3.1 Training and test data generation 
 >>>### Usage: 
 
-    python get_xy_label_data_cnnc_combine_from_database_3d8X8.py <None> <gene name reference list> <TF-target pair list> <TF-target pair count list> <None> <time-course scRNA-seq path+file prefix> <time point number> <flag if pair list has ground truth> <data generation folder name> 
+    python 3D_tensor_generation.py <None> <gene name reference list> <TF-target pair list> <TF-target pair count list> <None> <time-course scRNA-seq path+file prefix> <time point number> <flag if pair list has ground truth> <data generation folder name> 
     
 >>>### command line in author's linux machine :
 
-    python get_xy_label_data_cnnc_combine_from_database_3d8X8.py None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/hesc2_gene_list_ref.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400_num.txt None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM 6 1 GTRD_NT_8X8_6 
+    python 3D_tensor_generation.py None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/hesc2_gene_list_ref.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400_num.txt None /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM 6 1 GTRD_NT_8X8_6 
  (where the path for the expession data is 
  
  '/home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM_0.h5',
  
  '/home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/RPKM_1.h5'......)
 
-`get_xy_label_data_cnnc_combine_from_database_3d8X8.py` uses the normalized scRNA-seq expresson data  to generate time-course normalized emperical PDF for each TF-candidate gene pair, and save it in `<data generation folder name>` folder.
+`3D_tensor_generation.py` uses the normalized scRNA-seq expresson data  to generate time-course normalized emperical PDF for each TF-candidate gene pair, and save it in `<data generation folder name>` folder.
 
 >>>#2, `gene name reference list` is the list that converts sc expression data gene set into gene symbol IDs. Format: `'gene symbol IDs\t sc gene ID'`.
 
@@ -71,9 +71,9 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
    
  >>## 3.4 Get performance of optimal model for three fold cross validation
   
-     python predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py
+     python cross_validation_summary.py
      
-   `predict_analysis_more_kegg_tfs_average_whole_new_rand_8NT.py` collects and summrzies results of the model in each fold to present the final results. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
+   `cross_validation_summary.py` collects and summrzies results of the model in each fold to present the final results. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
  
  >>## 3.5 Get prediction using the trained model.
   
