@@ -84,5 +84,5 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
     
 >>>### command line in author's linux machine :
 
-    python conv_lstm_deep_prediction.py /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/GTRD_NT_8X8_6 
+    python conv_lstm_deep_prediction.py /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/new_Xlr00001_KEGG_3d_conv_ddeeper_NT_p600_e100 /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/GTRD_NT_8X8_6 
    `conv_lstm_deep_prediction.py` uses the trained model to give prediction for new gene pair list. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
