@@ -78,5 +78,11 @@ Here we use gene symbol information to align scRNA-seq and gene pair's gene sets
  >>## 3.5 Get prediction using the trained model.
   
      python conv_lstm_deep_prediction.py
-     
+ >>>### Usage: 
+
+    python conv_lstm_deep_prediction.py <model_path> <newNEPDF_path> 
+    
+>>>### command line in author's linux machine :
+
+    python conv_lstm_deep_prediction.py /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/GTRD_NT_8X8_6 
    `conv_lstm_deep_prediction.py` uses the trained model to give prediction for new gene pair list. Please change 'data_path', 'save_dir', 'the path of trained model' accordingly.
