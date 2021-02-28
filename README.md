@@ -18,6 +18,34 @@ Author's environment is python 3.6.3 in a Linux server which is now running Cent
 Firstly, gene pair plus label list and normalized time-course single cell gene expression data are provided by users to generated 3D NEDPF for each (gene pair, label). Secondly, a cross validation strategy is used to train and test our TDL models. Finally the model can predict new gene pair’s label.
 
 ## Users should first figure out the right paths for all the scripts and datasets.
+>>## 3.0 gene pair list generation from known gene pair set 
+>>>### Usage: 
+
+    python gene_pair_set_generation.py <gene name reference list> <known gene pair list> <path of generated pair list> <path of generated pair num list>
+    
+>>>### command line in author's linux machine :
+
+    python gene_pair_set_generation.py /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/hesc2_gene_list_ref.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_TF_target.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400.txt /home/yey3/nn_project2/data/hesc_2_GSE75748_firstone/TF_target_prediction/hesc2_gene_pairs_400_num.txt
+
+`gene_pair_set_generation.py` uses the konwn gene pair list to generate a gene pair list where konwn gene pair is positve sample and random pair is negative sample.
+
+>>>#1, `gene name reference list` is the list that converts sc expression data gene set into gene symbol IDs. Format: `'gene symbol IDs\t sc gene ID'`.
+
+>>>#2, `known pair list` is the list that contains konwn gene pairs. format : `'GeneA    GeneB'`.
+
+>>>#3, `path of generated pair list` is the destination of the list that contains positive and negative gene pairs and their labels. format : `'GeneA    GeneB    label'`.
+
+>>>#4, `path of generated pair num list` is the destination of a number list that divides gene_pair_list into small parts, where each part corresponds to one TF.
+
+
+#################OUTPUT
+
+It generates a 3D NEPDF_data folder, and a series of data files containing `Nxdata_tf` (3D NEPDF file) ,`ydata_TF`(label file) and `zdata_tf` (gene symbol pair file) for each data part divided.
+
+Here we use gene symbol information to align scRNA-seq and gene pair's gene sets. The scRNA-seq may use entrez ID or ensembl ID, or other IDs, gene pair list for GTRD used gene symbol ID, thus we generated `gene name list` to convert all the IDs to gene symbols. Please also do IDs convertion if users want to use their own expression data.
+
+## The file path of 'data_path'in the following code is used in the author's own machine, so please change it to the approprite path according to user's own environment.
+
 
 >>## 3.1 Training and test data generation 
 >>>### Usage: 
