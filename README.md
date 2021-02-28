@@ -40,9 +40,9 @@ Firstly, gene pair plus label list and normalized time-course single cell gene e
 
 #################OUTPUT
 
-It generates a 3D NEPDF_data folder, and a series of data files containing `Nxdata_tf` (3D NEPDF file) ,`ydata_TF`(label file) and `zdata_tf` (gene symbol pair file) for each data part divided.
+It generates a gene pair list with positive and negative gene pairs, and also a gene pair number list to divide gene_pair_list into small parts, where each part corresponds to one TF.
 
-Here we use gene symbol information to align scRNA-seq and gene pair's gene sets. The scRNA-seq may use entrez ID or ensembl ID, or other IDs, gene pair list for GTRD used gene symbol ID, thus we generated `gene name list` to convert all the IDs to gene symbols. Please also do IDs convertion if users want to use their own expression data.
+Here we use gene symbol information to align scRNA-seq and gene pair's gene sets. The scRNA-seq may use entrez ID or ensembl ID, or other IDs, gene pair list for GTRD used gene symbol ID, thus we generated `gene name reference list` to convert all the IDs to gene symbols. Please also do IDs convertion if users want to use their own expression data.
 
 ## The file path of 'data_path'in the following code is used in the author's own machine, so please change it to the approprite path according to user's own environment.
 
